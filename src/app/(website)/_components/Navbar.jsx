@@ -3,6 +3,10 @@ import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
+import { motion } from "framer-motion"
+import { RiWhatsappLine } from "react-icons/ri";
+import { MdOutlineMailOutline } from "react-icons/md";
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false) 
@@ -25,6 +29,151 @@ if (hideNavbarPaths.some(path => pathname.startsWith(path))) {
 
   return (
     <header className="w-full z-50 relative">
+       <div className="overflow-hidden  text-gray-950 py-3 mx-1 lg:mx-8  ">
+  <motion.div
+    className="flex items-center gap-20 whitespace-nowrap w-max"
+    animate={{ x: ["0%", "-50%"] }}
+    transition={{
+      repeat: Infinity,
+      duration: 25,
+      ease: "linear",
+    }}
+  >
+
+    {/* Arabic */}
+    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
+      <p>هذا الموقع معروض للبيع</p>
+
+      <a
+        href="https://wa.me/212679352846"
+        target="_blank"
+        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
+      >
+        <RiWhatsappLine size={20} />
+        WhatsApp
+      </a>
+
+      <a
+        href="mailto:ahdidouabdelhafid@gmail.com"
+        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
+      >
+        <MdOutlineMailOutline size={20} />
+        Email
+      </a>
+    </div>
+
+    {/* French */}
+    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
+      <p>Ce site est à vendre</p>
+
+      <a
+        href="https://wa.me/212679352846"
+        target="_blank"
+        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
+      >
+        <RiWhatsappLine size={20} />
+        WhatsApp
+      </a>
+
+      <a
+        href="mailto:ahdidouabdelhafid@gmail.com"
+        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
+      >
+        <MdOutlineMailOutline size={20} />
+        Email
+      </a>
+    </div>
+
+    {/* English */}
+    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
+      <p>This website is for sale</p>
+
+      <a
+        href="https://wa.me/212679352846"
+        target="_blank"
+        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
+      >
+        <RiWhatsappLine size={20} />
+        WhatsApp
+      </a>
+
+      <a
+        href="mailto:ahdidouabdelhafid@gmail.com"
+        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
+      >
+        <MdOutlineMailOutline size={20} />
+        Email
+      </a>
+    </div>
+    {/* ## */}
+     {/* Arabic */}
+    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
+      <p>هذا الموقع معروض للبيع</p>
+
+      <a
+        href="https://wa.me/212679352846"
+        target="_blank"
+        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
+      >
+        <RiWhatsappLine size={20} />
+        WhatsApp
+      </a>
+
+      <a
+        href="mailto:ahdidouabdelhafid@gmail.com"
+        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
+      >
+        <MdOutlineMailOutline size={20} />
+        Email
+      </a>
+    </div>
+
+    {/* French */}
+    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
+      <p>Ce site est à vendre</p>
+
+      <a
+        href="https://wa.me/212679352846"
+        target="_blank"
+        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
+      >
+        <RiWhatsappLine size={20} />
+        WhatsApp
+      </a>
+
+      <a
+        href="mailto:ahdidouabdelhafid@gmail.com"
+        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
+      >
+        <MdOutlineMailOutline size={20} />
+        Email
+      </a>
+    </div>
+
+    {/* English */}
+    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
+      <p>This website is for sale</p>
+
+      <a
+        href="https://wa.me/212679352846"
+        target="_blank"
+        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
+      >
+        <RiWhatsappLine size={20} />
+        WhatsApp
+      </a>
+
+      <a
+        href="mailto:ahdidouabdelhafid@gmail.com"
+        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
+      >
+        <MdOutlineMailOutline size={20} />
+        Email
+      </a>
+    </div>
+
+  </motion.div>
+</div>
       {/* ## navbar top  */}
       <div className="bg-cyan-400 py-2 md:h-12 flex items-center relative z-20">
         <div className="container mx-auto  flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">

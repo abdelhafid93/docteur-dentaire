@@ -7,7 +7,7 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: 'https://doctormaroc.com/dentaire',
+      url: 'https://doctormaroc.com/service/dentaire',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
