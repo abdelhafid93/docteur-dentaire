@@ -14,7 +14,7 @@ function Footer() {
           
           {/* Section 1: About */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Doctor Maroc</h3>
+            <h3 className="text-2xl font-bold mb-6">Centre Médical</h3>
             <p className="text-white/80 leading-relaxed mb-6">
               Nous nous engageons à fournir les meilleurs soins médicaux avec des technologies de pointe et une équipe d'experts dévoués à votre santé.
             </p>
@@ -78,7 +78,7 @@ function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-8 text-center text-sm opacity-70">
-          <p>© {new Date().getFullYear()} Doctor Maroc. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Centre Médical. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

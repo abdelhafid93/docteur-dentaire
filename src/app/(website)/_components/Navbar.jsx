@@ -2,6 +2,7 @@
 import { useState } from "react" 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false) 
@@ -28,6 +29,13 @@ if (hideNavbarPaths.some(path => pathname.startsWith(path))) {
       <div className="bg-cyan-400 py-2 md:h-12 flex items-center relative z-20">
         <div className="container mx-auto  flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
           <div className="flex items-center">
+            <Image
+            src={"/logo1.svg"}
+            width={100}
+            height={100}
+            alt="logo"
+            className="w-10 h-6 object-cover"
+            />
             <span className="text-sm font-semibold text-slate-900 tracking-wide uppercase">
               Bienvenue chez Centre Médical 
             </span>

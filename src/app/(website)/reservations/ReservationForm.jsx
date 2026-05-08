@@ -97,9 +97,9 @@ export default function ReservationFlow() {
           </motion.h2>
                     {/* ## message comfirmation */}
           <motion.p
-                 initial={{ opacity: 0, scale:0 }}
+                 initial={{ opacity: 0, scale:0.5 }}
               animate={{ opacity: 1, scale:1 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.7, delay:0.3 }}
           className=" text-xs md:text-sm font-bold text-white  mt-2">{step === "form"?"Entrez un e-mail valide pour recevoir un code de confirmation":""}
           </motion.p>
  
