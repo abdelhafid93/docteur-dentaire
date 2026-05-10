@@ -5,7 +5,9 @@ import { usePathname } from "next/navigation"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { RiWhatsappLine } from "react-icons/ri";
+import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdOutlineMailOutline } from "react-icons/md";
+
 
 
 function Navbar() {
@@ -29,149 +31,105 @@ if (hideNavbarPaths.some(path => pathname.startsWith(path))) {
 
   return (
     <header className="w-full z-50 relative">
-       <div className="overflow-hidden  text-gray-950 py-3 mx-1 lg:mx-8  ">
+<div className="overflow-hidden bg-red-600 text-white py-3">
   <motion.div
     className="flex items-center gap-20 whitespace-nowrap w-max"
     animate={{ x: ["0%", "-50%"] }}
     transition={{
       repeat: Infinity,
-      duration: 25,
+      duration: 35,
       ease: "linear",
     }}
   >
+    {/* ===== Groupe 1 ===== */}
+    <div className="flex items-center gap-10 shrink-0 text-sm md:text-base font-semibold">
+      <span className="font-bold uppercase tracking-wide">
+        🚨 Urgences médicales 24h/24 et 7j/7
+      </span>
 
-    {/* Arabic */}
-    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
-      <p>هذا الموقع معروض للبيع</p>
+      <span>🏥 Hôpital multidisciplinaire avec plusieurs spécialités</span>
+
+      <span>👨‍⚕️ Médecins spécialistes qualifiés</span>
+
+      <span>🩺 Consultations, examens et soins complets</span>
+
+      <span>💉 Laboratoire d’analyses et imagerie médicale</span>
+
+      <span>🚑 Service d’urgence disponible à tout moment</span>
+
+      <span>❤️ Prise en charge rapide et professionnelle</span>
 
       <a
-        href="https://wa.me/212679352846"
+        href="tel:+212679352846"
+        className="flex items-center gap-2 text-yellow-200 hover:text-white transition"
+      >
+        <BsFillTelephoneFill size={18} />
+        Appel d’urgence
+      </a>
+
+      <a
+        href="https://wa.me/212"
         target="_blank"
-        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 text-green-200 hover:text-white transition"
       >
         <RiWhatsappLine size={20} />
         WhatsApp
       </a>
 
       <a
-        href="mailto:ahdidouabdelhafid@gmail.com"
-        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
+        href="mailto:ah"
+        className="flex items-center gap-2 text-blue-200 hover:text-white transition"
       >
         <MdOutlineMailOutline size={20} />
         Email
       </a>
     </div>
 
-    {/* French */}
-    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
-      <p>Ce site est à vendre</p>
+    {/* ===== Groupe 2 (copie pour une animation infinie fluide) ===== */}
+    <div className="flex items-center gap-10 shrink-0 text-sm md:text-base font-semibold">
+      <span className="font-bold uppercase tracking-wide">
+        🚨 Urgences médicales 24h/24 et 7j/7
+      </span>
+
+      <span>🏥 Hôpital multidisciplinaire avec plusieurs spécialités</span>
+
+      <span>👨‍⚕️ Médecins spécialistes qualifiés</span>
+
+      <span>🩺 Consultations, examens et soins complets</span>
+
+      <span>💉 Laboratoire d’analyses et imagerie médicale</span>
+
+      <span>🚑 Service d’urgence disponible à tout moment</span>
+
+      <span>❤️ Prise en charge rapide et professionnelle</span>
 
       <a
-        href="https://wa.me/212679352846"
+        href="tel:+212"
+        className="flex items-center gap-2 text-yellow-200 hover:text-white transition"
+      >
+        <BsFillTelephoneFill size={18} />
+        Appel d’urgence
+      </a>
+
+      <a
+        href="https://wa.me/212"
         target="_blank"
-        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 text-green-200 hover:text-white transition"
       >
         <RiWhatsappLine size={20} />
         WhatsApp
       </a>
 
       <a
-        href="mailto:ahdidouabdelhafid@gmail.com"
-        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
+        href="mailto:ahd"
+        className="flex items-center gap-2 text-blue-200 hover:text-white transition"
       >
         <MdOutlineMailOutline size={20} />
         Email
       </a>
     </div>
-
-    {/* English */}
-    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
-      <p>This website is for sale</p>
-
-      <a
-        href="https://wa.me/212679352846"
-        target="_blank"
-        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
-      >
-        <RiWhatsappLine size={20} />
-        WhatsApp
-      </a>
-
-      <a
-        href="mailto:ahdidouabdelhafid@gmail.com"
-        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
-      >
-        <MdOutlineMailOutline size={20} />
-        Email
-      </a>
-    </div>
-    {/* ## */}
-     {/* Arabic */}
-    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
-      <p>هذا الموقع معروض للبيع</p>
-
-      <a
-        href="https://wa.me/212679352846"
-        target="_blank"
-        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
-      >
-        <RiWhatsappLine size={20} />
-        WhatsApp
-      </a>
-
-      <a
-        href="mailto:ahdidouabdelhafid@gmail.com"
-        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
-      >
-        <MdOutlineMailOutline size={20} />
-        Email
-      </a>
-    </div>
-
-    {/* French */}
-    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
-      <p>Ce site est à vendre</p>
-
-      <a
-        href="https://wa.me/212679352846"
-        target="_blank"
-        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
-      >
-        <RiWhatsappLine size={20} />
-        WhatsApp
-      </a>
-
-      <a
-        href="mailto:ahdidouabdelhafid@gmail.com"
-        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
-      >
-        <MdOutlineMailOutline size={20} />
-        Email
-      </a>
-    </div>
-
-    {/* English */}
-    <div className="flex items-center gap-4 text-lg font-bold shrink-0">
-      <p>This website is for sale</p>
-
-      <a
-        href="https://wa.me/212679352846"
-        target="_blank"
-        className="flex items-center gap-1 text-green-800 hover:text-green-300 transition"
-      >
-        <RiWhatsappLine size={20} />
-        WhatsApp
-      </a>
-
-      <a
-        href="mailto:ahdidouabdelhafid@gmail.com"
-        className="flex items-center gap-1 text-blue-800 hover:text-blue-300 transition"
-      >
-        <MdOutlineMailOutline size={20} />
-        Email
-      </a>
-    </div>
-
   </motion.div>
 </div>
       {/* ## navbar top  */}
