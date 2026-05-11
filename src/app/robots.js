@@ -3,13 +3,15 @@ export default function robots() {
 
   return {
     rules: {
-      userAgent: '*', // ينطبق على جميع روبوتات محركات البحث
-      allow: '/',     // السماح بأرشفة جميع صفحات الموقع
+      userAgent: '*',
+      allow: '/',
       disallow: [
-        '/admin',     // منع أرشفة لوحة التحكم
-        '/private',   // منع أرشفة أي مسار خاص
-      ], 
+        '/admin',
+        '/private',
+        '/api/',      // ✅ منع أرشفة API routes
+        '/studio',    // ✅ منع أرشفة Sanity Studio
+      ],
     },
-    sitemap: `${baseUrl}/sitemap.xml`, // الرابط المباشر لخريطة الموقع
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

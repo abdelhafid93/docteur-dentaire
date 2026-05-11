@@ -37,7 +37,7 @@ if (hideNavbarPaths.some(path => pathname.startsWith(path))) {
     animate={{ x: ["0%", "-50%"] }}
     transition={{
       repeat: Infinity,
-      duration: 35,
+      duration: 25,
       ease: "linear",
     }}
   >
