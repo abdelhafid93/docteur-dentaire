@@ -63,10 +63,7 @@ function Footer() {
                 <FaMapMarkerAlt className="mt-1 text-xl" />
                 <span className="opacity-90">123 Avenue Mohamed V, Tanger, Maroc</span>
               </li>
-              <li className="flex items-center gap-4">
-                <FaPhoneAlt />
-                <span className="opacity-90">+212 5XX XX XX XX</span>
-              </li>
+            
               <li className="flex items-center gap-4">
                 <FaEnvelope />
                 <span className="opacity-90">ex@doctormaroc.com</span>
