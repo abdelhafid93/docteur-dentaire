@@ -5,15 +5,16 @@ import { usePathname } from "next/navigation"
 import Image from "next/image"
 import { motion } from "framer-motion";
 
-
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false) 
   const pathname = usePathname()
 
+  // الخطوة 1: تحديث الروابط لتشير إلى أقسام عيادة الأسنان في الصفحة الرئيسية (Landing Page)
   const links = [
     { name: "Accueil", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "Réserver", href: "/reservations" },
+    { name: "Services", href: "/#services" }, // سينتقل مباشرة لقسم خدمات الأسنان
+    { name: "À propos", href: "/#apropos" },   // نبذة عن طبيب الأسنان والعيادة
+    { name: "Sourires", href: "/#gallery" },   // معرض صور الحالات (قبل وبعد)
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen)
@@ -33,8 +34,8 @@ function Navbar() {
   return (
     <header className="relative w-full">
       {/* =========================
-         Top Bar (الشريط العلوي)
-         ========================= */}
+          Top Bar (الشريط العلوي)
+          ========================= */}
       <div className="bg-cyan-600 text-white py-2 md:h-12 flex items-center relative z-[60]">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0 px-6">
           
@@ -46,8 +47,9 @@ function Navbar() {
               alt="logo"
               className="w-10 h-6 object-cover"
             />
+            {/* تحديث نص الترحيب ليناسب عيادة الأسنان */}
             <span className="text-sm font-semibold tracking-wide uppercase text-white ml-2">
-              Bienvenue chez Centre Médical
+              Chirurgie & Esthétique Dentaire
             </span>
           </div>
 
@@ -67,27 +69,27 @@ function Navbar() {
                 <circle cx="12" cy="12" r="10" />
                 <polyline points="12 6 12 12 16 14" />
               </svg>
-              <span>24h/24 7j/7</span>
+              <span>Sur Rendez-vous</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* =========================
-         Navbar Principale
-         ========================= */}
+          Navbar Principale
+          ========================= */}
       <div className="bg-white/95 backdrop-blur-md border-b border-slate-100 px-6 py-4 relative z-[50]">
         <nav className="container mx-auto flex items-center justify-between">
 
-          {/* Logo principal */}
+          {/* اسم اللوجو المحدث ليناسب الهوية الجديدة الموحدة */}
           <Link
             className="font-black text-xl md:text-2xl tracking-tighter text-slate-900"
             href="/"
           >
-            Centre
+            Dentiste
             <span className="text-cyan-600 text-[16px] md:text-[18px]">
               {" "}
-              Médical
+              Maroc
             </span>
           </Link>
 
@@ -135,8 +137,8 @@ function Navbar() {
         </nav>
 
         {/* =========================
-           Mobile Menu (Dropdown)
-           ========================= */}
+            Mobile Menu (Dropdown)
+            ========================= */}
         <div 
           className={`
             md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-xl z-[40] overflow-hidden transition-all duration-300 ease-in-out
@@ -146,10 +148,11 @@ function Navbar() {
           <ul className="flex flex-col p-6 gap-2">
             {links.map((link, index) => (
               <motion.li
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7,delay:index*0.2 }}
-              key={index}>
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: index * 0.2 }}
+                key={index}
+              >
                 <Link
                   href={link.href}
                   onClick={closeMenu}
@@ -175,8 +178,8 @@ function Navbar() {
       </div>
 
       {/* =========================
-         Marquee (الشريط المتحرك)
-         ========================= */}
+          Marquee (الشريط المتحرك)
+          ========================= */}
       <div className="overflow-hidden bg-slate-900 text-white py-3">
         {/* اترك هذا الجزء كما هو خاص بـ motion.div */}
       </div>
