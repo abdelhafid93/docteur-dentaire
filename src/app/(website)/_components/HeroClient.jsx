@@ -22,7 +22,7 @@ function Hero() {
   };
 
   return (
-    <header className="relative w-full min-h-[85vh] lg:h-[85vh] flex items-center bg-gradient-to-br from-slate-50 via-white to-cyan-50/40 overflow-hidden py-12 lg:py-0">
+    <header className="relative w-full min-h-[85vh] lg:h-[85vh] flex items-center bg-[#EBFDFF] overflow-hidden py-12 lg:py-0">
       
       {/* الدوائر الجمالية الخلفية لإعطاء تأثير طبي معاصر ومريح للنظر */}
       <div className="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-cyan-200/20 rounded-full blur-3xl z-0 pointer-events-none" />
